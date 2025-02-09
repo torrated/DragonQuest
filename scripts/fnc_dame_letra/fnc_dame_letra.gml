@@ -1,6 +1,6 @@
 /// @function                fnc_dame_letra()
-/// @description             Devuelve una letra (A,B,C,D,E) en funcion de las probabilidades 20,20,20,35,5
-/// @return {string}
+/// @description             Devuelve un tipo de (A,B,C,D,E) en funcion de las probabilidades 20,20,20,35,5
+/// @return {String}
 function fnc_dame_letra()
 {
 	randomize();
