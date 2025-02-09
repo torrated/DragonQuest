@@ -24,8 +24,10 @@ if (instance_exists(obj_controles))
 	{
 		var _ficha = instance_copy(false);
 		_ficha.fija = true;
+		ficha = fnc_dame_letra();
+		sprite_index = struct_get(tipo_ficha,ficha);
 	}
 }
 
-x = mouse_x;
-y = mouse_y;
+x = 16+(32*int64((mouse_x)/32));
+y = 16+(32*int64((mouse_y)/32));
