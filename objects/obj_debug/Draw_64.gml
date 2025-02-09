@@ -2,6 +2,6 @@
 
 with (obj_controles)
 {
-	if (obj_controles.enter)
+	if (enter)
 		draw_text(0,0,"ENTER");
 }
