@@ -11,3 +11,4 @@ tipo_ficha = {
 };
 
 fija = false;
+colocable = true;
