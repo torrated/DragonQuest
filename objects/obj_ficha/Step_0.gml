@@ -1,13 +1,21 @@
 /// @description 
 
+if (fija) exit;
+
 
 // genera una ficha aleatoria
-with (obj_controles)
+if (instance_exists(obj_controles))
 {
-	if (enter)
+	if (obj_controles.enter)
 	{
-		other.ficha = fnc_dame_letra();
-		other.sprite_index = struct_get(other.tipo_ficha,other.ficha);
+		ficha = fnc_dame_letra();
+		sprite_index = struct_get(tipo_ficha,ficha);
+	}
+	
+	if (obj_controles.click)
+	{
+		var _ficha = instance_copy(false);
+		_ficha.fija = true;
 	}
 }
 
