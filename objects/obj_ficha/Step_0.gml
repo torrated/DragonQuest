@@ -6,7 +6,10 @@ x = 16+(32*int64((mouse_x)/32));
 y = 16+(32*int64((mouse_y)/32));
 
 if (struct_exists(obj_grid.grid,string(x)+","+string(y)))
+{
 	colocable = false;
+	exit;
+}
 else
 	colocable = true;
 
@@ -27,7 +30,10 @@ if (instance_exists(obj_controles))
 	
 	
 	// fija la ficha en pantalla
-	if (obj_controles.click)
+	if ((obj_controles.click)
+		&& (x >= 48 && x <= 432)
+		&& (y >= 80 && y <= 368)
+		)
 	{
 		if (instance_exists(obj_grid))
 		{

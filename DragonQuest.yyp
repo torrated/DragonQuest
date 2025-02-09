@@ -40,6 +40,7 @@
     {"id":{"name":"obj_debug","path":"objects/obj_debug/obj_debug.yy",},},
     {"id":{"name":"obj_ficha","path":"objects/obj_ficha/obj_ficha.yy",},},
     {"id":{"name":"obj_grid","path":"objects/obj_grid/obj_grid.yy",},},
+    {"id":{"name":"obj_players","path":"objects/obj_players/obj_players.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"fnc_dame_letra","path":"scripts/fnc_dame_letra/fnc_dame_letra.yy",},},
     {"id":{"name":"spr_A","path":"sprites/spr_A/spr_A.yy",},},
