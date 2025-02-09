@@ -5,3 +5,5 @@ if (keyboard_check_pressed(ord("P")))
 	{
 		image_index += 1;
 	}
+
+draw_text(0,0,"#fichas:"+string(instance_number(obj_ficha)));
