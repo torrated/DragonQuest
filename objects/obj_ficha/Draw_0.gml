@@ -1,3 +1,8 @@
 /// @description 
+
+if (colocable)
+	image_blend = c_white;
+else	
+	image_blend = c_red;
+	
 draw_self();
-draw_text_transformed(room_width/2,room_height/2,ficha,5,5,0);

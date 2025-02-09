@@ -9,3 +9,6 @@ tipo_ficha = {
 	 D: spr_D ,
 	 E: spr_E 
 };
+
+fija = false;
+colocable = true;
