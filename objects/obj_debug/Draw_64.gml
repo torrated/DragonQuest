@@ -7,3 +7,8 @@ with (obj_controles)
 	if (click)
 		draw_text(0,20,"CLICK");
 }
+if (keyboard_check_pressed(ord("P")))
+	with (obj_ficha)
+	{
+		image_index += 1;
+	}
