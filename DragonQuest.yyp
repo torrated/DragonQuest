@@ -35,6 +35,7 @@
   "name":"DragonQuest",
   "resources":[
     {"id":{"name":"Note1","path":"notes/Note1/Note1.yy",},},
+    {"id":{"name":"obj_camara","path":"objects/obj_camara/obj_camara.yy",},},
     {"id":{"name":"obj_controles","path":"objects/obj_controles/obj_controles.yy",},},
     {"id":{"name":"obj_debug","path":"objects/obj_debug/obj_debug.yy",},},
     {"id":{"name":"obj_ficha","path":"objects/obj_ficha/obj_ficha.yy",},},
