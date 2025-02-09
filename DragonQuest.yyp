@@ -47,6 +47,8 @@
     {"id":{"name":"spr_C","path":"sprites/spr_C/spr_C.yy",},},
     {"id":{"name":"spr_D","path":"sprites/spr_D/spr_D.yy",},},
     {"id":{"name":"spr_E","path":"sprites/spr_E/spr_E.yy",},},
+    {"id":{"name":"spr_tileset1","path":"sprites/spr_tileset1/spr_tileset1.yy",},},
+    {"id":{"name":"tileset_suelo","path":"tilesets/tileset_suelo/tileset_suelo.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
