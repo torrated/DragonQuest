@@ -12,7 +12,7 @@ fija = false;
 colocable = true;
 posicion = ""; // x,y
 
-arriba = false;
+arriba = false; //false: no camino; true: camino
 abajo = false;
 derecha = false;
 izquierda = false;
@@ -24,24 +24,12 @@ ficha = "";
 
 /// @function		colocar()
 /// @description	coloca una ficha en el lugar actual
-/// @return {Bool}
 function colocar()
 {
-	if (
-		(x >= 48 && x <= 432	&& y >= 80 && y <= 368)
-		&& !(struct_exists(obj_grid.grid,posicion))
-		)
-	{
-		colocable = true;
-		fija = true;
-		struct_set(obj_grid.grid,posicion,self);
-	}
-	else
-	{
-		colocable = false;
-	}
-	
-	return colocable;
+	if !(colocable)
+		exit;
+	fija = true;
+	struct_set(obj_grid.grid,posicion,[arriba,derecha,abajo,izquierda]);
 }
 
 /// @function		randomiza()
@@ -50,6 +38,14 @@ function randomiza()
 {
 	ficha = fnc_dame_letra();
 	sprite_index = struct_get(sprite_ficha,string(ficha));
+	switch(ficha)
+	{
+		case "A": arriba=false;derecha=false;abajo=true;izquierda=true;break;
+		case "B": arriba=false;derecha=true;abajo=true;izquierda=false;break;
+		case "C": arriba=true;derecha=true;abajo=true;izquierda=true;break;
+		case "D": arriba=true;derecha=false;abajo=true;izquierda=false;break;
+		case "E": arriba=false;derecha=false;abajo=true;izquierda=false;break;
+	}
 }
 
 
@@ -58,9 +54,14 @@ function randomiza()
 /// @param {Real}  _giro  El sentido del giro. Puede ser HORARIO o ANTIHORARIO
 function rotar(_giro)
 {
+	var _aux = true;
 	switch(_giro)
 	{
-		case(HORARIO): image_angle -= 90; break;
-		case(ANTIHORARIO): image_angle += 90; break;
+		case(HORARIO):	image_angle -= 90;
+						_aux=arriba;arriba=izquierda;izquierda=abajo;abajo=derecha;derecha=_aux;
+						break;
+		case(ANTIHORARIO):	image_angle += 90; 
+							_aux=arriba;arriba=derecha;derecha=abajo;abajo=izquierda;izquierda=_aux;
+							break;
 	}
 }

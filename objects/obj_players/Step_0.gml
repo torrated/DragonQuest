@@ -6,9 +6,9 @@ if (instance_exists(obj_controles) && obj_controles.enter && ficha == noone)
 	ficha.randomiza();
 }
 
-if (instance_exists(obj_controles) && obj_controles.rotar_horario)
+if (instance_exists(obj_controles) && obj_controles.rotar_horario && ficha <> noone)
 	ficha.rotar(HORARIO);
-if (instance_exists(obj_controles) && obj_controles.rotar_antihorario)
+if (instance_exists(obj_controles) && obj_controles.rotar_antihorario && ficha <> noone)
 	ficha.rotar(ANTIHORARIO);
 
 if (instance_exists(obj_controles) && obj_controles.click && ficha <> noone && ficha.colocable)
